@@ -12,9 +12,9 @@ WORKDIR /root
 RUN wget https://storage.googleapis.com/chrome-for-testing-public/129.0.6668.58/linux64/chromedriver-linux64.zip
 RUN unzip ./chromedriver-linux64.zip
 
+RUN mv ./chromedriver-linux64/chromedriver /usr/bin/chromedriver
 RUN chmod +x /usr/bin/chromedriver
 RUN dos2unix /usr/bin/chromedriver
-RUN mv ./chromedriver-linux64/chromedriver /usr/bin/chromedriver
 
 COPY ./ /root
 
